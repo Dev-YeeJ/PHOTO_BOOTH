@@ -1,0 +1,32 @@
+{
+  "camera_index": 0,
+  "countdown_seconds": 5,
+  "result_display_seconds": 12,
+  "mirror": true,
+  "gdrive_folder_url": "",
+  "canvas_size": {
+    "width": 1200,
+    "height": 3600
+  },
+  "photo_slots": [
+    {"x": 100, "y": 520, "width": 1000, "height": 680},
+    {"x": 100, "y": 1390, "width": 1000, "height": 680},
+    {"x": 100, "y": 2260, "width": 1000, "height": 680}
+  ],
+  "photo_frame": {
+    "border_width": 14,
+    "border_color": [17, 17, 20],
+    "keyline_width": 7,
+    "keyline_color": [244, 244, 238],
+    "corner_radius": 0,
+    "shadow": {"offset": [0, 16], "blur": 24, "opacity": 135}
+  },
+  "overlays": [
+    {"asset": "1.png", "cx": 130, "cy": 525, "width": 260},
+    {"asset": "2.png", "cx": 1055, "cy": 1160, "width": 220},
+    {"asset": "3.png", "cx": 172, "cy": 1435, "width": 330},
+    {"asset": "4.png", "cx": 1055, "cy": 2030, "width": 220},
+    {"asset": "5.png", "cx": 155, "cy": 2305, "width": 230},
+    {"asset": "6.png", "cx": 1055, "cy": 2900, "width": 190}
+  ]
+}

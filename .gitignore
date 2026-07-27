@@ -1,0 +1,24 @@
+# Secrets — never commit real credentials
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Captured & generated photos
+data/raw/
+data/final/
+pending_uploads.json
+
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Keyed mascot frames (regenerated from the clip)
+assets/brand/.mascot_cache.npz

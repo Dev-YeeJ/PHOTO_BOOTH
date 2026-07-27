@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m py_compile src/camera.py)",
+      "Bash(python -m py_compile src/camera.py src/gui.py)",
+      "Bash(python -c ' *)",
+      "Bash(python \"C:\\\\Users\\\\jaime\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-jaime-PHOTO-BOOTH\\\\2985e052-6f38-425b-9661-8733cc0e27be\\\\scratchpad\\\\preview.py\")",
+      "Bash(md5sum assets/background.png)",
+      "Bash(python scratch_bg.py)",
+      "Read(//tmp/**)",
+      "Bash(python \"C:\\\\Users\\\\jaime\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-jaime-PHOTO-BOOTH\\\\2985e052-6f38-425b-9661-8733cc0e27be\\\\scratchpad\\\\preview_strip.py\")",
+      "Bash(python -c \"import PIL; print\\(PIL.__version__\\)\")",
+      "Bash(python \"C:/Users/jaime/AppData/Local/Temp/claude/c--Users-jaime-PHOTO-BOOTH/b156a959-5784-4eae-ae0a-23beb0dcc64d/scratchpad/render_layout.py\")",
+      "Bash(python -m py_compile src/gui.py)",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && rm -f data/raw/smoke_*.jpg data/final/photobooth_20260726_*.jpg && python -m py_compile main.py src/gui.py src/branding.py src/camera.py src/image_processing.py && echo \"clean + compile OK\" && ls data/raw | grep -c smoke)",
+      "Bash(python -m py_compile main.py src/gui.py src/camera.py)",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && rm -rf \"C:/Users/jaime/AppData/Local/Temp/claude/c--Users-jaime-PHOTO-BOOTH/b156a959-5784-4eae-ae0a-23beb0dcc64d/scratchpad/mirrortest\" && rm -f data/raw/smoke_*.jpg data/final/photobooth_20260726_0[5-9]*.jpg && ls data/raw | grep -c smoke; grep -n \"countdown_seconds\\\\|\\\\\"mirror\\\\\"\" config.json)",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && ls -la assets/ assets/brand/ 2>/dev/null; echo \"--- search wider ---\"; find /c/Users/jaime -maxdepth 3 -iname \"*panther*\" 2>/dev/null | head)",
+      "Read(//c/Users/jaime/**)",
+      "Bash(python -m py_compile src/gui.py src/branding.py)",
+      "Bash(python -m py_compile src/branding.py)",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && ls -la --time-style=+%H:%M data/final | grep 20260726 && rm -f data/raw/smoke_*.jpg)",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && echo \"=== assets ===\" && ls -la assets/ && echo \"=== assets/brand ===\" && ls -la assets/brand/ && echo \"=== Downloads \\(recent\\) ===\" && ls -lat /c/Users/jaime/Downloads 2>/dev/null | head -25)",
+      "Read(//c/Users/jaime/Downloads/**)",
+      "Bash(python -m py_compile main.py src/gui.py src/branding.py)",
+      "PowerShell(Get-CimInstance Win32_Process -Filter \"Name like '%python%'\" | Select-Object ProcessId, @{n='Cmd';e={$_.CommandLine}} | Format-Table -AutoSize -Wrap)",
+      "Bash(python \"C:/Users/jaime/AppData/Local/Temp/claude/c--Users-jaime-PHOTO-BOOTH/b156a959-5784-4eae-ae0a-23beb0dcc64d/scratchpad/shots.py\")",
+      "Bash(cd \"c:/Users/jaime/PHOTO_BOOTH\" && rm -f \"C:/Users/jaime/AppData/Local/Temp/claude/c--Users-jaime-PHOTO-BOOTH/b156a959-5784-4eae-ae0a-23beb0dcc64d/scratchpad/s_\"*.png \"C:/Users/jaime/AppData/Local/Temp/claude/c--Users-jaime-PHOTO-BOOTH/b156a959-5784-4eae-ae0a-23beb0dcc64d/scratchpad/gui_\"*.png && echo \"screen grabs removed\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\jaime\\PHOTO_BOOTH\\data\\raw",
+      "C:\\Users\\jaime\\AppData\\Local\\Temp\\claude\\c--Users-jaime-PHOTO-BOOTH\\b156a959-5784-4eae-ae0a-23beb0dcc64d\\scratchpad"
+    ]
+  }
+}

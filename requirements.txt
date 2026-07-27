@@ -1,0 +1,6 @@
+customtkinter==6.0.0
+opencv-python==5.0.0
+pillow==12.3.0
+boto3==1.43.39
+python-dotenv==1.2.2
+qrcode==8.2
