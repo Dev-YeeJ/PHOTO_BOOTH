@@ -11,8 +11,8 @@ ACCENT_RGB = (245, 179, 1)
 class ImageProcessor:
     def __init__(self, config):
         self.config = config
-        self.canvas_width = config.get("canvas_size", {}).get("width", 1200)
-        self.canvas_height = config.get("canvas_size", {}).get("height", 3600)
+        self.canvas_width = config.get("canvas_size", {}).get("width", 1080)
+        self.canvas_height = config.get("canvas_size", {}).get("height", 1920)
         self.photo_slots = config.get("photo_slots", [])
         self.overlays = config.get("overlays", [])
         self.photo_frame = config.get("photo_frame") or {}

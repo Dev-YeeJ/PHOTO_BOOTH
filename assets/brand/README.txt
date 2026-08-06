@@ -1,5 +1,5 @@
 Drop exported brand assets in this folder. Nothing here is required — anything
-missing falls back to a region cropped out of assets/background.png or to a
+missing falls back to a region cropped out of the strip artwork or to a
 pattern drawn in code. Anything present is picked up on the next launch with no
 code changes.
 

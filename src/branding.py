@@ -5,7 +5,7 @@ Everything the GUI needs in order to look like the printed strip is resolved
 here, in priority order:
 
   1. a file exported into assets/brand/   (drop-in — no code change needed)
-  2. a region derived from the strip artwork (assets/background.png)
+  2. a region derived from the strip artwork (assets/new_background.png)
   3. something drawn procedurally
 
 So dropping title_lockup.png / mascot.png / a .ttf into assets/brand/ upgrades
@@ -25,8 +25,10 @@ MASCOT_CLIPS = ("panther_loop", "mascot_loop", "mascot")
 
 # The title lockup ("4 FRESHMEN FIRST-WEEK FUNFEST" + the three seals) as it
 # sits inside the flattened strip artwork. Used until a transparent PNG of the
-# lockup is exported into assets/brand/.
-LOCKUP_BOX = (110, 35, 1130, 490)
+# lockup is exported into assets/brand/. It is measured against a specific
+# template, so swapping the artwork means re-measuring it — override with
+# "lockup_box": [left, top, right, bottom] in config.json.
+LOCKUP_BOX = (310, 5, 765, 292)           # assets/new_background.png (1080x1920)
 
 
 def display_font_path(assets_dir="assets"):
@@ -142,10 +144,11 @@ def _luma_alpha(img, floor=16, gain=2.2):
 
 
 class Brand:
-    def __init__(self, assets_dir="assets", background_path=None):
+    def __init__(self, assets_dir="assets", background_path=None, lockup_box=None):
         self.assets_dir = assets_dir
         self.brand_dir = os.path.join(assets_dir, BRAND_SUBDIR)
-        self.background_path = background_path or os.path.join(assets_dir, "background.png")
+        self.background_path = background_path or os.path.join(assets_dir, "new_background.png")
+        self.lockup_box = tuple(lockup_box) if lockup_box else LOCKUP_BOX
         self.font_path = display_font_path(assets_dir)
         self.font_family = None
         self._cache = {}
@@ -208,7 +211,7 @@ class Brand:
         else:
             # Crop it out of the flattened strip artwork and key it against its
             # own black backdrop, then feather what's left of the crop edges.
-            img = Image.open(self.background_path).convert("RGB").crop(LOCKUP_BOX)
+            img = Image.open(self.background_path).convert("RGB").crop(self.lockup_box)
             img = _fade_edges(_luma_alpha(img), left=0.04, right=0.07,
                               top=0.05, bottom=0.07)
 

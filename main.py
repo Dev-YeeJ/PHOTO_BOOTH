@@ -14,27 +14,33 @@ def load_config(config_path="config.json"):
         "camera_index": 0,
         "countdown_seconds": 5,
         "mirror": True,
-        "canvas_size": {"width": 1200, "height": 3600},
+        "background_asset": "new_background.png",
+        "lockup_box": [310, 5, 765, 292],
+        "canvas_size": {"width": 1080, "height": 1920},
+        # 16:9 exactly (46x16 by 46x9) — the camera's own aspect, so nothing is
+        # ever cropped. As large as the artwork allows: the title ends at y~200
+        # and the mascot starts at y~1590, and 16:9 ties the width to whatever
+        # height is left between them.
         "photo_slots": [
-            {"x": 100, "y": 520, "width": 1000, "height": 680},
-            {"x": 100, "y": 1390, "width": 1000, "height": 680},
-            {"x": 100, "y": 2260, "width": 1000, "height": 680}
+            {"x": 172, "y": 222, "width": 736, "height": 414},
+            {"x": 172, "y": 681, "width": 736, "height": 414},
+            {"x": 172, "y": 1140, "width": 736, "height": 414}
         ],
         "photo_frame": {
-            "border_width": 14,
+            "border_width": 8,
             "border_color": [17, 17, 20],
-            "keyline_width": 7,
+            "keyline_width": 4,
             "keyline_color": [244, 244, 238],
             "corner_radius": 0,
-            "shadow": {"offset": [0, 16], "blur": 24, "opacity": 135}
+            "shadow": {"offset": [0, 8], "blur": 12, "opacity": 125}
         },
         "overlays": [
-            {"asset": "1.png", "cx": 130, "cy": 525, "width": 260},
-            {"asset": "2.png", "cx": 1055, "cy": 1160, "width": 220},
-            {"asset": "3.png", "cx": 172, "cy": 1435, "width": 330},
-            {"asset": "4.png", "cx": 1055, "cy": 2030, "width": 220},
-            {"asset": "5.png", "cx": 155, "cy": 2305, "width": 230},
-            {"asset": "6.png", "cx": 1055, "cy": 2900, "width": 190}
+            {"asset": "1.png", "cx": 187, "cy": 220, "width": 196},
+            {"asset": "2.png", "cx": 881, "cy": 610, "width": 163},
+            {"asset": "3.png", "cx": 202, "cy": 685, "width": 248},
+            {"asset": "4.png", "cx": 881, "cy": 1069, "width": 163},
+            {"asset": "5.png", "cx": 192, "cy": 1142, "width": 175},
+            {"asset": "6.png", "cx": 876, "cy": 1528, "width": 136}
         ]
     }
 
